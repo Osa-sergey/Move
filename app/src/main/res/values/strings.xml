@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Move</string>
+    <string name="bottom_main">Главная</string>
+    <string name="bottom_favorites">Избранное</string>
+    <string name="bottom_notifications">Уведомления</string>
+    <string name="bottom_menu">Меню</string>
 </resources>
