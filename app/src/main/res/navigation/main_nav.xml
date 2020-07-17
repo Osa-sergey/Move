@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_nav"
+    app:startDestination="@+id/bottomMain">
+
+    <!-- Фрагменты нижнего меню. Должны совпадать по id с id, указанными в bottom_menu.xml   -->
+    <fragment
+        android:id="@+id/bottomMain"
+        android:name="com.a3f.move.fragments.bottom.MainFragment"
+        tools:layout="@layout/fragment_main"/>
+
+    <fragment
+        android:id="@+id/bottomFavorites"
+        android:name="com.a3f.move.fragments.bottom.FavoritesFragment"
+        tools:layout="@layout/fragment_favorites"/>
+
+    <fragment
+        android:id="@+id/bottomMenu"
+        android:name="com.a3f.move.fragments.bottom.MenuFragment"
+        tools:layout="@layout/fragment_menu"/>
+
+    <fragment
+        android:id="@+id/bottomNotifications"
+        android:name="com.a3f.move.fragments.bottom.NotificationsFragment"
+        tools:layout="@layout/fragment_notifications"/>
+
+</navigation>
