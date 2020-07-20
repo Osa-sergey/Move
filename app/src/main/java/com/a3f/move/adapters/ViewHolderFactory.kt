@@ -11,11 +11,12 @@ import com.a3f.move.models.Type
 class ViewHolderFactory {
 
     class AdsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        var text: TextView = itemView.findViewById(R.id.text)
+        var text = itemView.findViewById(R.id.text) as TextView
         //TODO дописать поля
     }
 
     class OfferViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var text = itemView.findViewById(R.id.text) as TextView
         //TODO дописать поля
     }
 
