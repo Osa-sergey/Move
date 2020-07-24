@@ -1,19 +1,18 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
 
     defaultConfig {
-        applicationId "com.a3f.move"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 1
         versionName "$versions.versionName"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -33,28 +32,12 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin"
     implementation "androidx.core:core-ktx:$versions.core"
     implementation "androidx.appcompat:appcompat:$versions.appcompat"
-    implementation "androidx.constraintlayout:constraintlayout:$versions.constraint"
+    implementation project(path: ':data')
     testImplementation "junit:junit:$versions.junit"
     androidTestImplementation "androidx.test.ext:junit:$versions.junitExt"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
 
-    //Material design
-    implementation material.material
-
-    //navigation
-    implementation navigation.navigationFragment
-    implementation navigation.navigationUI
-
     //Paging
     implementation paging.runtime
 
-    //Cardview
-    implementation cardview.cardview
-
-    //Moxy
-    implementation moxy.moxy
-    implementation moxy.moxyAndroid
-    implementation moxy.moxyAndroidX
-    implementation moxy.moxyMaterial
-    kapt moxy.moxyCompiler
 }

@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_nav"
-    app:startDestination="@+id/bottomMain">
+    app:startDestination="@+id/listMapSearchFragment">
 
     <!-- Фрагменты нижнего меню. Должны совпадать по id с id, указанными в bottom_menu.xml   -->
     <fragment
@@ -24,5 +24,12 @@
         android:id="@+id/bottomNotifications"
         android:name="com.a3f.move.fragments.bottom.NotificationsFragment"
         tools:layout="@layout/fragment_notifications"/>
+
+
+
+    <fragment
+        android:id="@+id/listMapSearchFragment"
+        android:name="com.a3f.move.fragments.others.ListMapSearchFragment"
+        tools:layout="@layout/fragment_list_map_search" />
 
 </navigation>

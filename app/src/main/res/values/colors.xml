@@ -7,4 +7,7 @@
     <color name="white">#fff</color>
     <color name="selectedBottomText">#a8d6f2</color>
     <color name="bottomNavBack">#0C96DB</color>
+    <color name="adsTitleText">#22282A</color>
+    <color name="adsAddressText">#73848C</color>
+    <color name="adsDetailsText">#22282A</color>
 </resources>
