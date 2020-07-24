@@ -1,8 +1,9 @@
-package com.a3f.move.storage
+package com.a3f.move
 
 import com.a3f.move.models.AdsModel
 import com.a3f.move.models.MultiListI
 import com.a3f.move.models.OfferModel
+
 
 class OfferAndAdsStorage() {
     fun getOfferAndAds(start: Int, size: Int): MutableList<MultiListI> {

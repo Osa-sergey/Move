@@ -37,4 +37,7 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$versions.junitExt"
     androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espresso"
 
+    //Paging
+    implementation paging.runtime
+
 }

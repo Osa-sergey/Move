@@ -29,7 +29,7 @@
 
     <fragment
         android:id="@+id/listMapSearchFragment"
-        android:name="com.a3f.move.fragments.bottom.others.listMapSearchFragment"
+        android:name="com.a3f.move.fragments.others.ListMapSearchFragment"
         tools:layout="@layout/fragment_list_map_search" />
 
 </navigation>

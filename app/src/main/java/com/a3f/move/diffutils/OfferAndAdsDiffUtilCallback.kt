@@ -6,11 +6,23 @@ import com.a3f.move.models.MultiListI
 import com.a3f.move.models.OfferModel
 import com.a3f.move.models.Type
 
+/**
+ * Класс необходимый для оптимального алгоритма перерисовки элементов при изменении в списке
+ * отображаемых объектов RecyclerView
+ */
 class OfferAndAdsDiffUtilCallback() : DiffUtil.ItemCallback<MultiListI>() {
 
+    /**
+     * Первоначальная проверка на то, что данные элементы являются разными версиями одного и
+     * того же элемента списка
+     **/
     override fun areItemsTheSame(oldItem: MultiListI, newItem: MultiListI): Boolean =
         oldItem.type.i == newItem.type.i && oldItem.id == newItem.id
 
+    /**
+     * Детальнон сравнение внутреннего контента элементов
+     * вызывается после уданого исполнения areItemsTheSame
+     */
     override fun areContentsTheSame(oldItem: MultiListI, newItem: MultiListI): Boolean {
         when(oldItem.type.i){
             Type.ADS.i -> {

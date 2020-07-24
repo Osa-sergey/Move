@@ -3,7 +3,11 @@ package com.a3f.move.models
 import androidx.recyclerview.widget.RecyclerView
 import com.a3f.move.adapters.ViewHolderFactory
 
-data class OfferModel(override val id: Int, override val type: Type = Type.OFFER, val str: String) : MultiListI {
+/**
+ * Модель элемента предложения
+ */
+data class OfferModel(override val id: Int, override val type: Type = Type.OFFER, val str: String) :
+    MultiListI {
 
     override fun getItemViewType(): Int = type.i
 
