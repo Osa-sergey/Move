@@ -1,4 +1,4 @@
-package com.a3f.move
+package com.a3f.move.pagedlist
 
 import com.a3f.move.models.AdsModel
 import com.a3f.move.models.MultiListI

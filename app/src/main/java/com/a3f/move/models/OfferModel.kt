@@ -13,7 +13,7 @@ data class OfferModel(override val id: Int, override val type: Type = Type.OFFER
 
     override fun bind(viewHolder: RecyclerView.ViewHolder) {
         var view = viewHolder as ViewHolderFactory.OfferViewHolder
-        view.text.text = str
+       // view.text.text = str
         // TODO "Добавить поля"
     }
 }

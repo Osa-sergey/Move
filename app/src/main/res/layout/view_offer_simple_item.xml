@@ -17,57 +17,115 @@
         app:layout_constraintTop_toTopOf="parent"
         app:cardCornerRadius="6dp">
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+          android:src="@mipmap/ic_launcher"/>
 
     </androidx.cardview.widget.CardView>
 
     <ImageView
+        android:id="@+id/like"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/cardView"
+        app:layout_constraintEnd_toEndOf="@id/cardView"
         app:layout_constraintTop_toTopOf="@id/cardView"
-        android:layout_marginTop="144dp"
-        android:layout_marginStart="272dp"
-        />
+        android:src="@drawable/ic_like"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:clickable="true"
+        android:focusable="true"/>
 
-    <TextView
-        android:id="@+id/title"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/photos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:textColor="@color/adsTitleText"
-        app:layout_constraintTop_toBottomOf="@id/cardView"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="fbbbgng"/>
+        app:layout_constraintEnd_toEndOf="@id/cardView"
+        app:layout_constraintBottom_toBottomOf="@id/cardView"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="18dp"
+        android:backgroundTint="@color/photosPhoneBackground">
 
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="13sp"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/adsAddressText"
-        app:layout_constraintTop_toBottomOf="@id/title"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Москва м Беляево"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photoImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_phone"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="8.5dp"
+                android:layout_marginBottom="8.5dp"
+                />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="5.6dp"
+                android:text="12"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toBottomOf="@+id/photoImg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/photoImg"
+                app:layout_constraintTop_toTopOf="@+id/photoImg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="15 000 000 Р"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/unseenPrice"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintStart_toStartOf="@id/cardView"/>
+
+        <TextView
+            android:id="@+id/date"
+            android:text="15 янв"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="13sp"
+            android:textColor="@color/dateText"
+            app:layout_constraintTop_toBottomOf="@id/cardView"
+            app:layout_constraintEnd_toEndOf="@id/cardView"/>
 
     <TextView
         android:id="@+id/details"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:textSize="13sp"
-        android:textColor="@color/adsDetailsText"
-        app:layout_constraintTop_toBottomOf="@id/address"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Москва м Беляево"/>
+        android:text="Квартира 2к 57м^2 этаж 3/16"
+        android:textColor="@color/offerDetailsText"
+        app:layout_constraintTop_toBottomOf="@id/date"
+        app:layout_constraintStart_toStartOf="@id/price"/>
 
-    <LinearLayout
-        android:id="@+id/buttons"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        android:text="Москва, улица Декабристов, 36к1"
+        android:textColor="@color/offerAddressText"
         app:layout_constraintTop_toBottomOf="@id/details"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/price"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

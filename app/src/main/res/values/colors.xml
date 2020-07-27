@@ -10,4 +10,9 @@
     <color name="adsTitleText">#22282A</color>
     <color name="adsAddressText">#73848C</color>
     <color name="adsDetailsText">#22282A</color>
+    <color name="photosPhoneBackground">#3D21282C</color>
+    <color name="unseenPrice">#EB8B47</color>
+    <color name="dateText">#73848C</color>
+    <color name="offerDetailsText">#22282A</color>
+    <color name="offerAddressText">#73848C</color>
 </resources>

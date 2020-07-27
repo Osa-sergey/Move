@@ -14,7 +14,7 @@ data class AdsModel(override val id: Int, override val type: Type = Type.ADS, va
 
     override fun bind(viewHolder: RecyclerView.ViewHolder) {
         val view = viewHolder as ViewHolderFactory.AdsViewHolder
-        view.text.text = str
+       // view.text.text = str
         //  TODO"Добавить поля"
     }
 }

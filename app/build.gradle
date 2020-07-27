@@ -57,4 +57,12 @@ dependencies {
     implementation moxy.moxyAndroidX
     implementation moxy.moxyMaterial
     kapt moxy.moxyCompiler
+
+    //Dagger
+    implementation dagger.dagger
+    implementation dagger.daggerAndroid
+    kapt dagger.daggerCompiler
+    kapt dagger.daggerAndroidProcessor
+
+
 }
